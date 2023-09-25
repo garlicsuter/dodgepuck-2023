@@ -13,9 +13,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            Debug.Log("You pressed D");
-        }
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        //Debug.Log("moveHorizontal: " + moveHorizontal);
+
+        float moveVertical = Input.GetAxis("Vertical");
+
+        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        Debug.Log("movement variable is = " + movement);
+
+        //if (Input.GetKeyDown(KeyCode.D))
+        //{
+        //    Debug.Log("You pressed D");
+        //}
     }
 }
